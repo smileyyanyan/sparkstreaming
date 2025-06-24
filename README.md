@@ -3,6 +3,11 @@ This application uses Spark Structured Streaming to read messages from a kafka i
 
 ##### Running the Applications
 
+Before starting the applications, make sure kafka server is started. 
+.\kafka-server-start.bat ..\..\config\server.properties
+
+All applications are configured to use spring.kafka.bootstrap-servers locally at localhost:9092.
+
 * First start the spring boot application 
 * Then start the spark streaming application.
 * Through spring boot, end a message to the input kafka topic.
