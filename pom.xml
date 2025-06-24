@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sanutty</groupId>
+  <artifactId>spark-streaming</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+ <properties>
+    <scala.binary.version>2.13</scala.binary.version>
+    <spark.version>4.0.0</spark.version>
+    <kafka.version>4.0.0</kafka.version>
+    <maven.compiler.release>17</maven.compiler.release>
+    <dl4j-master.version>1.0.0-M2.1</dl4j-master.version>
+    <nd4j.backend>nd4j-native</nd4j.backend>
+    <jcommander.version>1.82</jcommander.version>
+  </properties>
+  
+  <dependencies>
+    
+        <!--  
+        ***************************************
+        Apache Spark Dependencies
+        ***************************************
+        -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scala.binary.version}</artifactId> 
+            <version>${spark.version}</version>
+        </dependency>
+    
+        <dependency>
+          <groupId>org.apache.spark</groupId>
+          <artifactId>spark-sql_${scala.binary.version}</artifactId>
+          <version>${spark.version}</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-mllib_${scala.binary.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_${scala.binary.version}</artifactId>
+            <version>${spark.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql-kafka-0-10_${scala.binary.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+  </dependencies>
+  
+  <build>
+        <pluginManagement>
+
+            <plugins>
+                <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.11.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>        
+    </build>
+      
+</project>
