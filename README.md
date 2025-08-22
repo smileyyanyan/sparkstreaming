@@ -1,24 +1,26 @@
-This application uses Spark Structured Streaming to read messages from a kafka input topic and writes it to an output kafka topic. 
 
 
-##### Running the Applications
+##### Housing Price Prediction Design
+![Alt text](HousingPricePredictorDesign.jpg?raw=true "Architectural Design")
 
-Before starting the applications, make sure kafka server is started. 
-.\kafka-server-start.bat ..\..\config\server.properties
 
-All applications are configured to use spring.kafka.bootstrap-servers locally at localhost:9092.
 
-* First start the spring boot application 
-* Then start the spark streaming application.
-* Through spring boot, end a message to the input kafka topic.
-* The spark readstream should pick up the new message from the input kafka topic and saves it to the output topic.
-* The spring boot application KafkaConsumerService should pick up the message from the output topic and print it to the console. 
+##### Run Kafka
+
+* Start kafka 
+	.\kafka-server-start.bat ..\..\config\server.properties
+	
+* Use the kafka console producer command line tool to simulate producing data from REST endpoint. 
+	kafka-console-producer --bootstrap-server localhost:9092 --topic input_topic_housing 
+	>{"MedInc": 3.23,"HouseAge": 23,"AveRooms": 6,"AveBedrms": 3,"Population": 325,"AveOccup": 3.0,"Latitude": 37.86,"Longitude": -122.23}
+
 
 
 ##### Running on Windows  
 
 * Install Apache Hadoop.
 * Make sure HADOOP_HOME is set.
+* Reference https://github.com/cdarlint/winutils/tree/master for the appropriate hadoop version. 
 * Download winutils.exe and hadoop.dll and add them to $HADOOP_HOME\bin.
 * Add $HADOOP_HOME\bin to $PATH. 
 
