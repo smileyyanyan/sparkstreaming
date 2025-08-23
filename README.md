@@ -5,7 +5,7 @@ This repo contains analytics applications using Apache Spark.
 * **Project Outlier Detection with KMeans Clustering - Spark Batch**
 * **Housing Price Prediction using Random Forest Regressor - Spark Streaming** 
 
-####Project Outlier Detection with KMeans Clustering
+### Project Outlier Detection with KMeans Clustering
 
 This is a batch spark project that calculates outliers from a list of project management data stored in csv using the KMeans algorithm with z-score thresholding. 
 
@@ -27,7 +27,7 @@ Java run configurations
 --add-opens=java.base/java.lang.invoke=ALL-UNNAMED  
 --add-opens=java.base/java.util=ALL-UNNAMED  
 
-####Housing Price Prediction with Random Forest Regressor
+### Housing Price Prediction with Random Forest Regressor
 
 The house price prediction project first reads historical housing information from a CSV file. This information is used to predict house price of new houses on the market. Once the historical housing data has been fitted with a random forest regression model, the program awaits for new housing data from a kafka topic. As new houses are streamed from kafka, the historical data model is used to predict the price of each incoming house. 
 
