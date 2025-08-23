@@ -5,12 +5,11 @@ public class HouseInfo {
 	private double mediumIncome;
 	private int houseAge;
 	private int numberOfRooms;
-	private int numberOfBedrooms;
+	private int numberOfBedrms;
 	private double population;
 	private double latitude;
 	private double longitude;
 	private double price;
-	
 	private double averageOccupation;
 	
 	public double getAverageOccupation() {
@@ -38,10 +37,10 @@ public class HouseInfo {
 		this.numberOfRooms = numberOfRooms;
 	}
 	public int getNumberOfBedrooms() {
-		return numberOfBedrooms;
+		return numberOfBedrms;
 	}
 	public void setNumberOfBedrooms(int numberOfBedrooms) {
-		this.numberOfBedrooms = numberOfBedrooms;
+		this.numberOfBedrms = numberOfBedrooms;
 	}
 	public double getPopulation() {
 		return population;
@@ -71,7 +70,7 @@ public class HouseInfo {
 	@Override
 	public String toString() {
 		StringBuilder buf = new StringBuilder();
-		buf.append("(lat, lon)=(" + latitude + "," + longitude+") total rooms= " + numberOfRooms + " BRs=" + numberOfBedrooms);
+		buf.append("(lat, lon)=(" + latitude + "," + longitude+") total rooms= " + numberOfRooms + " BRs=" + numberOfBedrms + " Price=" + price);
 		return buf.toString();
 	}
 

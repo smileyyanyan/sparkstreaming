@@ -10,9 +10,10 @@
 * Start kafka 
 	.\kafka-server-start.bat ..\..\config\server.properties
 	
-* Use the kafka console producer command line tool to simulate producing data from REST endpoint. 
-	kafka-console-producer --bootstrap-server localhost:9092 --topic input_topic_housing 
-	>{"MedInc": 3.23,"HouseAge": 23,"AveRooms": 6,"AveBedrms": 3,"Population": 325,"AveOccup": 3.0,"Latitude": 37.86,"Longitude": -122.23}
+* Use the kafka console producer command line tool to simulate producing data from REST endpoint.    
+	kafka-console-producer --bootstrap-server localhost:9092 --topic input_topic_housing  
+	
+	>{"mediumIncome": 3.23,"houseAge": 23,"numberOfRooms": 6,"numberOfBedrooms": 3,"population": 325,"averageOccup": 3.0,"latitude": 37.86,"longitude": -122.23}
 
 
 
